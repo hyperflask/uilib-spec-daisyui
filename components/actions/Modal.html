@@ -1,0 +1,36 @@
+---
+props:
+  __unknown: true
+  close-btn:
+    class: " "
+    missing:
+      target: ".modal-box form"
+      outerHTML: ""
+  open:
+    class: modal-open
+  position:
+    class: "modal-{}"
+  responsive:
+    default: true
+    class: "modal-bottom sm:modal-middle"
+  width:
+    target: ".modal-box"
+    class: "{}"
+  large:
+    target: ".modal-box"
+    class: "w-11/12 max-w-full"
+  no-blur:
+    target: ".modal-backdrop"
+    outerHTML: ""
+---
+<dialog class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <slot></slot>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>

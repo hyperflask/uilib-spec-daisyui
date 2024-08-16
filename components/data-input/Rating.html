@@ -1,0 +1,41 @@
+---
+props:
+  name:
+    target: input
+    attribute: name
+  rating:
+    - target: "input:nth-child(1)"
+      match: {$gt: 0}
+      attributes:
+        checked: "checked"
+    - target: "input:nth-child(2)"
+      match: {$gt: 1}
+      attributes:
+        checked: "checked"
+    - target: "input:nth-child(3)"
+      match: {$gt: 2}
+      attributes:
+        checked: "checked"
+    - target: "input:nth-child(4)"
+      match: {$gt: 3}
+      attributes:
+        checked: "checked"
+    - target: "input:nth-child(5)"
+      match: {$gt: 4}
+      attributes:
+        checked: "checked"
+  mask:
+    target: input
+    class: "mask-{}"
+    default: star
+  size:
+    class: "rating-{}"
+
+---
+<div class="rating">
+  <input type="radio" class="mask" value="1" />
+  <input type="radio" class="mask" value="2" />
+  <input type="radio" class="mask" value="3" />
+  <input type="radio" class="mask" value="4" />
+  <input type="radio" class="mask" value="5" />
+</div>

@@ -1,0 +1,21 @@
+---
+props:
+  __unknown: input
+  bordered:
+    class: "input-bordered"
+    default: true
+  ghost:
+    class: "input-ghost"
+  style:
+    class: "input-{}"
+  size:
+    class: "input-{}"
+  type:
+    target: input
+    attribute: type
+    default: "text"
+---
+<label class="input flex items-center gap-2">
+  <slot name="label"></slot>
+  <input type="text" class="grow">
+</label>

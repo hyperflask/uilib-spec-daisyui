@@ -1,0 +1,19 @@
+---
+props:
+  __unknown: true
+  title:
+    slot: title
+  title-href:
+    target: ".navbar > .flex-1:first-child > a"
+    attribute: href
+  style:
+    class: "bg-{} text-{}-content"
+---
+<div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl"><slot name="title"></slot></a>
+  </div>
+  <div class="flex-none gap-2">
+    <slot></slot>
+  </div>
+</div>

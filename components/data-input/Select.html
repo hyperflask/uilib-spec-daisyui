@@ -1,0 +1,22 @@
+---
+props:
+  __unknown: true
+  bordered:
+    class: "select-bordered"
+    default: true
+  style:
+    class: "select-{}"
+  size:
+    class: "select-{}"
+  ghost:
+    class: "select-ghost"
+  placeholder:
+    target: "option[disabled]"
+    innerHTML: "{}"
+    missing:
+      outerHTML: ""
+---
+<select class="select w-full max-w-xs">
+  <option disabled selected></option>
+  <slot></slot>
+</select>

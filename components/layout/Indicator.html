@@ -1,0 +1,23 @@
+---
+props:
+  value:
+    target: ".indicator-item"
+    innerHTML: "{}"
+  style:
+    target: ".indicator-item"
+    class: "badge-{}"
+    default: neutral
+  size:
+    target: ".indicator-item"
+    class: "badge-{}"
+  outline:
+    target: ".indicator-item"
+    class: "badge-outline"
+  position:
+    target: ".indicator-item"
+    class: "indicator-{}"
+---
+<div class="indicator">
+  <span class="indicator-item badge"></span>
+  <slot></slot>
+</div>
