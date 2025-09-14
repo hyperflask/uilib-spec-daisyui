@@ -1,0 +1,30 @@
+---
+doc:
+  description: |
+    Tabs can be used to show a list of links in a tabbed format.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/tabs/)
+  children:
+    - Tab
+  examples:
+    - children:
+        - tag: Tab
+          props:
+            label: "Tab 1"
+          children: "Content for tab 1"
+        - tag: Tab
+          props:
+            label: "Tab 2"
+          children: "Content for tab 2"
+
+props:
+  style:
+    class: "tabs-{}"
+    type: Enum[box,border,lift]
+  size:
+    class: "tabs-{}"
+    type: Enum[xs,sm,md,lg,xl]
+---
+<div role="tablist" class="tabs">
+  <slot></slot>
+</div>

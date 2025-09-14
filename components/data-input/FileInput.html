@@ -1,11 +1,18 @@
 ---
+doc:
+  description: |
+    File Input is a an input field for uploading files.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/file-input/)
+
 props:
-  __unknown: true
-  bordered:
-    class: "file-input-bordered"
-  style:
+  color:
     class: "file-input-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   size:
     class: "file-input-{}"
+    type: Enum[xs,sm,md,lg,xl]
+  ghost:
+    class: "file-input-ghost"
 ---
-<input type="file" class="file-input w-full max-w-xs" />
+<input type="file" class="file-input" />

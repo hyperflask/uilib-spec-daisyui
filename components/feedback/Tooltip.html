@@ -1,0 +1,23 @@
+---
+doc:
+  description: |
+    Tooltip can be used to show a message when hovering over an element.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/tooltip/)
+
+props:
+  label:
+    attribute: "data-tip"
+    required: true
+  placement:
+    class: "tooltip-{}"
+    type: Enum[top, bottom, left, right]
+  open:
+    class: "tooltip-open"
+  color:
+    class: "tooltip-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+---
+<div class="tooltip">
+  <slot></slot>
+</div>

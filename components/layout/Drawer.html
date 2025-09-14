@@ -1,0 +1,43 @@
+---
+doc:
+  description: |
+    Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/drawer/)
+  children:
+    - tag: DrawerContent
+    - tag: DrawerSide
+  examples:
+    - title: Navbar menu for desktop + sidebar drawer for mobile
+      props:
+        id: drawer1
+      children:
+        - tag: DrawerContent
+          children:
+            - tag: Navbar
+              props:
+                sidebar-toggle: drawer1
+                sidebar-toggle-responsive: lg
+        - tag: DrawerSide
+          props:
+            id: drawer1
+          children:
+            - tag: Menu
+
+props:
+  id:
+    target: input
+    attribute: id
+    default: drawer1
+  open:
+    class: drawer-open
+  responsive:
+    class: "{}:drawer-open"
+    type: Enum[xs,sm,md,lg,xl]
+  end:
+    class: drawer-end
+---
+<div class="drawer">
+  <input type="checkbox" class="drawer-toggle">
+  <slot></slot>
+</div>

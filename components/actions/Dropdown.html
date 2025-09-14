@@ -1,6 +1,27 @@
+---
+doc:
+  description: |
+    Dropdown can open a menu or any other element when the button is clicked.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/dropdown/)
+  children:
+    - tag: DropdownItem
+      description: Use DropdownItem to create a clickable item in the dropdown.
+  examples:
+    - title: Simple dropdown
+      children:
+        - tag: DropdownItem
+          props:
+            href: "/page1"
+          children: "Item 1"
+        - tag: DropdownItem
+          props:
+            href: "/page2"
+          children: "Item 2"
+---
 <div class="dropdown">
-  <div tabindex="0" role="button" class="btn m-1">Click</div>
-  <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+  <div tabindex="0" role="button" class="btn m-1"><slot name="label"></slot></div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
     <slot></slot>
   </ul>
 </div>

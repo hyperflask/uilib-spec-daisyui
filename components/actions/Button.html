@@ -1,17 +1,31 @@
 ---
+doc: |
+  Buttons allow the user to take actions or make choices.
+
+  [Link to DaisyUI documentation](https://daisyui.com/components/button/)
+
 props:
-  __unknown: true
-  style:
+  color:
     class: "btn-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   active:
     class: "btn-active"
   outline:
     class: "btn-outline"
   size:
     class: "btn-{}"
+    type: Enum[xs,sm,md,lg,xl]
   wide:
     class: "btn-wide"
-  glass:
-    class: "glass"
+  block:
+    class: "btn-block"
+  shape:
+    class: "btn-{}"
+    type: Enum[square,circle]
+  join:
+    class: "join-item"
+  as:
+    tag: "{}"
+    default: button
 ---
 <button class="btn"><slot></slot></button>

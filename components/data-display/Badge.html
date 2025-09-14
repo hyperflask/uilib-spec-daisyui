@@ -1,0 +1,23 @@
+---
+doc: |
+  Badges are used to inform the user of the status of specific data.
+
+  [Link to DaisyUI documentation](https://daisyui.com/components/badge/)
+
+props:
+  color:
+    class: "badge-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  size:
+    class: "badge-{}"
+    type: Enum[xs,sm,md,lg,xl]
+  soft:
+    class: "badge-soft"
+  outline:
+    class: "badge-outline"
+  dash:
+    class: "badge-dash"
+  ghost:
+    class: "badge-ghost"
+---
+<div class="badge"><slot></slot></div>

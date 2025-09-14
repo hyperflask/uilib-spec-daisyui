@@ -1,0 +1,21 @@
+---
+doc:
+  description: |
+    Divider will be used to separate content vertically or horizontally.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/divider/)
+
+props:
+  horizontal:
+    class: divider-horizontal
+  responsive:
+    class: "{}:divider-horizontal"
+    type: Enum[xs,sm,md,lg,xl]
+  color:
+    class: "divider-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  text-placement:
+    class: "divider-{}"
+    type: Enum[start,end]
+---
+<div class="divider"><slot></slot></div>

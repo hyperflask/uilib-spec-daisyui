@@ -1,4 +1,7 @@
 ---
+doc:
+  hidden: true
+  description: Use as part of Accordion to create a panel that can be expanded or collapsed.
 props:
   title:
     slot: title
@@ -11,9 +14,13 @@ props:
   toggle-icon:
     target: "&"
     class: "collapse-{}"
+  name:
+    target: "input"
+    attribute: name
+    default: accordion1
 ---
-<div class="collapse bg-base-200">
-  <input type="radio" name="my-accordion-1" /> 
-  <div class="collapse-title text-xl font-medium"><slot name="title"></slot></div>
+<div class="collapse bg-base-100 border border-base-300">
+  <input type="radio" />
+  <div class="collapse-title font-semibold"><slot name="title"></slot></div>
   <div class="collapse-content"><slot></slot></div>
 </div>

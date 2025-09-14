@@ -1,21 +1,29 @@
 ---
+doc:
+  description: |
+    Indicators are used to place an element on the corner of another element.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/indicator/)
+
 props:
   value:
     target: ".indicator-item"
     innerHTML: "{}"
-  style:
+  color:
     target: ".indicator-item"
     class: "badge-{}"
-    default: neutral
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   size:
     target: ".indicator-item"
     class: "badge-{}"
+    type: Enum[xs,sm,md,lg,xl]
   outline:
     target: ".indicator-item"
     class: "badge-outline"
   position:
     target: ".indicator-item"
     class: "indicator-{}"
+    type: Enum[start,center,end,top,middle,bottom]
 ---
 <div class="indicator">
   <span class="indicator-item badge"></span>

@@ -1,0 +1,33 @@
+---
+doc:
+  description: |
+    Pagination is a group of buttons that allow the user to navigate between a set of related content.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/pagination/)
+  children:
+    - PaginationPage
+    - PaginationPrev
+    - PaginationNext
+  examples:
+    - children:
+      - tag: PaginationPrev
+        props:
+          href: "/page1"
+      - tag: PaginationPage
+        children: "1"
+        props:
+          href: "/page1"
+      - tag: PaginationPage
+        children: "2"
+        props:
+          href: "/page2"
+          active: true
+      - tag: PaginationPage
+        children: "3"
+        props:
+          href: "/page3"
+      - tag: PaginationNext
+        props:
+          href: "/page3"
+---
+<div class="join"><slot></slot></div>

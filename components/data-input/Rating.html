@@ -1,4 +1,10 @@
 ---
+doc:
+  description: |
+    Rating is a set of radio buttons that allow the user to rate something.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/rating/)
+
 props:
   name:
     target: input
@@ -8,34 +14,52 @@ props:
       match: {$gt: 0}
       attributes:
         checked: "checked"
+        aria-current: "true"
     - target: "input:nth-child(2)"
       match: {$gt: 1}
       attributes:
         checked: "checked"
+        aria-current: "true"
     - target: "input:nth-child(3)"
       match: {$gt: 2}
       attributes:
         checked: "checked"
+        aria-current: "true"
     - target: "input:nth-child(4)"
       match: {$gt: 3}
       attributes:
         checked: "checked"
+        aria-current: "true"
     - target: "input:nth-child(5)"
       match: {$gt: 4}
       attributes:
         checked: "checked"
+        aria-current: "true"
   mask:
     target: input
     class: "mask-{}"
     default: star
+  color:
+    target: input
+    class: "bg-{}"
+    default: orange-400
   size:
     class: "rating-{}"
-
+    type: Enum[xs,sm,md,lg,xl]
+  readonly:
+    target: input
+    tag: div
+  clearable:
+    target: ".rating-hidden"
+    outerHTML: ""
+    match: {$eq: false}
+    default: false
 ---
 <div class="rating">
-  <input type="radio" class="mask" value="1" />
-  <input type="radio" class="mask" value="2" />
-  <input type="radio" class="mask" value="3" />
-  <input type="radio" class="mask" value="4" />
-  <input type="radio" class="mask" value="5" />
+  <input type="radio" class="rating-hidden" aria-label="clear" />
+  <input type="radio" class="mask" aria-label="1" />
+  <input type="radio" class="mask" aria-label="2" />
+  <input type="radio" class="mask" aria-label="3" />
+  <input type="radio" class="mask" aria-label="4" />
+  <input type="radio" class="mask" aria-label="5" />
 </div>

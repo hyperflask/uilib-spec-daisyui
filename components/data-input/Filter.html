@@ -1,0 +1,31 @@
+---
+doc:
+  description: |
+    Filter is a group of radio buttons. Choosing one of the options will hide the others and shows a reset button next to the chosen option.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/filter/)
+  children:
+    - FilterItem
+
+props:
+  name:
+    target: input
+    attribute: name
+    required: true
+  reset-label:
+    target: input
+    attribute: aria-label
+    default: "All"
+  color:
+    target: input
+    class: "btn-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  size:
+    target: input
+    class: "btn-{}"
+    type: Enum[xs,sm,md,lg,xl]
+---
+<div class="filter">
+  <input class="btn filter-reset" type="radio">
+  <slot></slot>
+</div>

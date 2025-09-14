@@ -1,7 +1,15 @@
 ---
+doc: |
+  Link adds the missing underline style to links.
+
+  [Link to DaisyUI documentation](https://daisyui.com/components/link/)
+
 props:
-  __unknown: true
-  style:
+  color:
     class: "link-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  hover:
+    class: "link-hover"
+    default: true
 ---
 <a class="link"><slot></slot></a>

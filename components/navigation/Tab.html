@@ -1,0 +1,16 @@
+---
+doc:
+  hidden: true
+
+props:
+  label:
+    target: input
+    attribute: aria-label
+    required: true
+  name:
+    target: input
+    attribute: name
+    default: tabs1
+---
+<input type="radio" class="tab">
+<div class="tab-content border-base-300 bg-base-100 p-6"><slot></slot></div>

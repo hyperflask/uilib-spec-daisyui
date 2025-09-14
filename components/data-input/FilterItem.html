@@ -1,0 +1,19 @@
+---
+doc:
+  hidden: true
+
+props:
+  name:
+    attribute: name
+    required: true
+  label:
+    attribute: aria-label
+    required: true
+  color:
+    class: "btn-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  size:
+    class: "btn-{}"
+    type: Enum[xs,sm,md,lg,xl]
+---
+<input class="btn" type="radio">

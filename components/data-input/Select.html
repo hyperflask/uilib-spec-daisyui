@@ -1,13 +1,17 @@
 ---
+doc:
+  description: |
+    Select is used to pick a value from a list of options.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/select/)
+
 props:
-  __unknown: true
-  bordered:
-    class: "select-bordered"
-    default: true
-  style:
+  color:
     class: "select-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   size:
     class: "select-{}"
+    type: Enum[xs,sm,md,lg,xl]
   ghost:
     class: "select-ghost"
   placeholder:
@@ -15,8 +19,18 @@ props:
     innerHTML: "{}"
     missing:
       outerHTML: ""
+  join:
+    class: join-item
+  validator:
+    class: validator
+  validator-hint:
+    target: ".validator-hint"
+    missing:
+      target: ".validator-hint"
+      outerHTML: ""
 ---
-<select class="select w-full max-w-xs">
+<select class="select">
   <option disabled selected></option>
   <slot></slot>
 </select>
+<div class="validator-hint"></div>

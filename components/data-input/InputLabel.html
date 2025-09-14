@@ -1,0 +1,18 @@
+---
+doc: Label for input element
+props:
+  label:
+    target: span
+    missing:
+      outerHTML: ""
+  floating:
+    class: "floating-label"
+    missing:
+      - class: "input"
+      - target: span
+        class: label
+---
+<label>
+  <span></span>
+  <slot></slot>
+</label>

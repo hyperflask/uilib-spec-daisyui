@@ -1,0 +1,17 @@
+---
+doc:
+  hidden: true
+
+props:
+  open:
+    attributes:
+      open: true
+---
+<li>
+  <details>
+    <summary><slot name="label"></slot></summary>
+    <ul>
+      <slot></slot>
+    </ul>
+  </details>
+</li>

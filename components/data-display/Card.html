@@ -1,0 +1,42 @@
+---
+doc:
+  description: |
+    Cards are used to group and display content in a way that is easily readable.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/card/)
+  children:
+    - CardTitle
+    - CardActions
+
+props:
+  image:
+    target: "img"
+    attribute: src
+    missing:
+      target: "figure"
+      outerHTML: ""
+  image-alt:
+    target: "img"
+    attribute: alt
+  image-full:
+    class: "image-full"
+  image-on-side:
+    class: "card-side"
+  title:
+    target: "h2"
+    innerHTML: "{}"
+    missing:
+      outerHTML: ""
+  size:
+    class: "card-{}"
+    type: Enum[xs,sm,md,lg,xl]
+---
+<div class="card bg-base shadow-sm">
+  <figure>
+    <img>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title"></h2>
+    <slot></slot>
+  </div>
+</div>

@@ -1,14 +1,18 @@
 ---
+doc:
+  description: |
+    Textarea allows users to enter text in multiple lines.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/textarea/)
+
 props:
-  __unknown: true
-  bordered:
-    class: "textarea-bordered"
-    default: true
-  ghost:
-    class: "textarea-ghost"
-  style:
+  color:
     class: "textarea-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   size:
     class: "textarea-{}"
+    type: Enum[xs,sm,md,lg,xl]
+  ghost:
+    class: "textarea-ghost"
 ---
 <textarea class="textarea"><slot></slot></textarea>

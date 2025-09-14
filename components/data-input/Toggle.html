@@ -1,9 +1,16 @@
 ---
+doc:
+  description: |
+    Toggle is a checkbox that is styled to look like a switch button.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/toggle/)
+
 props:
-  __unknown: true
-  style:
+  color:
     class: "toggle-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   size:
     class: "toggle-{}"
+    type: Enum[xs,sm,md,lg,xl]
 ---
 <input type="checkbox" class="toggle" />

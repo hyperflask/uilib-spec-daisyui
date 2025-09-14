@@ -1,0 +1,21 @@
+---
+doc:
+  hidden: true
+  description: Use as part of Menu to create a menu item.
+  examples:
+    - props:
+        href: "/page1"
+props:
+  __unknown: a
+  active:
+    target: a
+    class: "menu-active"
+  tooltip:
+    target: a
+    class: "tooltip"
+    attributes:
+      data-tip: "{}"
+  disabled:
+    class: "menu-disabled"
+---
+<li><a><slot></slot></a></li>

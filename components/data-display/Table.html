@@ -1,0 +1,18 @@
+---
+doc: |
+  Table can be used to show a list of data in a table format.
+
+  [Link to DaisyUI documentation](https://daisyui.com/components/table/)
+
+props:
+  zebra:
+    class: "table-zebra"
+  pin-rows:
+    class: "table-pin-rows"
+  pin-cols:
+    class: "table-pin-cols"
+  size:
+    class: "table-{}"
+    type: Enum[xs,sm,md,lg,xl]
+---
+<table class="table"><slot></slot></table>

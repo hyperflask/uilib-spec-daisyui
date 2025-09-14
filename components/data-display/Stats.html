@@ -1,0 +1,16 @@
+---
+doc:
+  description: |
+    Group multiple Stat components together.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/stat/)
+  children:
+    - Stat
+
+props:
+  vertical:
+    transformations: []
+    missing:
+      class: "lg:stats-horizontal"
+---
+<div class="stats stats-vertical shadow"><slot></slot></div>

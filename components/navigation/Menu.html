@@ -1,0 +1,53 @@
+---
+doc:
+  description: |
+    Menu is used to display a list of links vertically or horizontally.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/menu/)
+  children:
+    - tag: MenuItem
+      description: Use MenuItem to create a clickable item in the menu.
+    - tag: MenuTitle
+      description: Use MenuTitle to create a title for a section in the menu.
+    - tag: SubMenu
+      description: Use SubMenu to create a nested menu with a title and items.
+    - tag: CollapsibleSubMenu
+      description: Use CollapsibleSubMenu to create a nested menu that can be expanded or collapsed.
+  examples:
+    - title: Simple menu
+      children:
+        - tag: MenuItem
+          children: "Item 1"
+        - tag: MenuItem
+          children: "Item 2"
+    - title: Simple menu with title
+      children:
+        - tag: MenuTitle
+          children: "My menu"
+        - tag: MenuItem
+          children: "Item 1"
+    - title: With submenu
+      children:
+        - tag: MenuItem
+          children: "Item 1"
+        - tag: SubMenu
+          props:
+            label: "Parent"
+          children:
+            - tag: MenuItem
+              children: "Child 1"
+            - tag: MenuItem
+              children: "Child 2"
+
+props:
+  horitzontal:
+    class: "menu-horizontal"
+  size:
+    class: "menu-{}"
+    type: Enum[xs,sm,md,lg,xl]
+---
+<div class="menu">
+  <ul>
+    <slot></slot>
+  </ul>
+</div>

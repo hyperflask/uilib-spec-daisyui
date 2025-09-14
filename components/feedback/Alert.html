@@ -1,26 +1,39 @@
 ---
+doc:
+  description: |
+    Alert informs users about important events.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/alert/)
+
 props:
-  style:
+  color:
     transformations:
       - class: 'alert-{}'
       - match: "info"
-        target: ".alert > svg:not(.info)"
+        target: "svg:not(.info)"
         outerHTML: ""
       - match: "success"
-        target: ".alert > svg:not(.success)"
+        target: "svg:not(.success)"
         outerHTML: ""
       - match: "warning"
-        target: ".alert > svg:not(.warning)"
+        target: "svg:not(.warning)"
         outerHTML: ""
       - match: "error"
-        target: ".alert > svg:not(.error)"
+        target: "svg:not(.error)"
         outerHTML: ""
     missing:
-      target: ".alert > svg"
+      target: "svg"
       outerHTML: ""
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  soft:
+    class: "alert-soft"
+  outline:
+    class: "alert-outline"
+  dash:
+    class: "alert-dash"
 
 ---
-<div role="alert" class="alert">
+<div role="alert" class="alert alert-vertical sm:alert-horizontal">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"

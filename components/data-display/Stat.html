@@ -1,0 +1,27 @@
+---
+doc: |
+  Stat is used to show numbers and data in a block.
+
+  [Link to DaisyUI documentation](https://daisyui.com/components/stat/)
+
+props:
+  title:
+    target: "stat-title"
+    required: true
+  value:
+    target: "stat-value"
+    required: true
+  desc:
+    target: "stat-desc"
+    missing:
+      outerHTML: ""
+  color:
+    target: "stat-value"
+    class: "text-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+---
+<div class="stat">
+  <div class="stat-title"></div>
+  <div class="stat-value"></div>
+  <div class="stat-desc"></div>
+</div>

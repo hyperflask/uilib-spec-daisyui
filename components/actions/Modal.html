@@ -1,6 +1,14 @@
 ---
+doc:
+  description: |
+    Modal is used to show a dialog or a box when you click a button.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/modal/)
+  children:
+    - ModalAction
+    - ModalTitle
+
 props:
-  __unknown: true
   close-btn:
     class: " "
     missing:
@@ -8,8 +16,12 @@ props:
       outerHTML: ""
   open:
     class: modal-open
-  position:
+  position-x:
     class: "modal-{}"
+    type: Enum[start, end]
+  position-y:
+    class: "modal-{}"
+    type: Enum[top,middle,bottom]
   responsive:
     default: true
     class: "modal-bottom sm:modal-middle"

@@ -1,0 +1,18 @@
+---
+doc:
+  hidden: true
+
+props:
+  completed:
+    class: "step-{completed-color}"
+  completed-color:
+    transformations: []
+    default: primary
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  color:
+    class: "step-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  icon:
+    attribute: data-content
+---
+<li class="step"><slot></slot></li>

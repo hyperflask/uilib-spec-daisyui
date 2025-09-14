@@ -1,0 +1,66 @@
+---
+doc: |
+  Avatars are used to show a thumbnail representation of an individual or business in the interface.
+
+  [Link to DaisyUI documentation](https://daisyui.com/components/avatar/)
+
+props:
+  src:
+    target: "img"
+    attribute: src
+  placeholder:
+    transformations:
+      - class: "avatar-placeholder"
+      - target: "& > div"
+        class: "bg-neutral text-neutral-content"
+      - target: "& > div"
+        innerHTML: '<span class="text-{placeholder-text-size}">{}</span>'
+  placeholder-text-size:
+    transformations: []
+    type: String
+  alt:
+    target: "img"
+    attribute: alt
+  rounded:
+    target: "& > div"
+    class: ".rounded"
+    default: true
+  size:
+    target: "& > div"
+    class: "w-{}"
+    default: 12
+    type: number
+  mask:
+    target: "& > div"
+    class: "mask mask-{}"
+    type: Enum[squircle,heart,hexagon,hexagon-2,decagon,pentagon,diamond,square,circle,star,star-2,triangle,triangle-2,triangle-3,triangle-4,half-1,half-2]
+  presence:
+    class: "avatar-{}"
+    type: Enum[online, offline]
+  indicator:
+    transformations:
+      - class: "indicator"
+      - target: ".indicator-item"
+        innerHTML: "{}"
+    missing:
+      target: ".indicator-item"
+      outerHTML: ""
+  indicator-color:
+    target: ".indicator-item"
+    class: "badge-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  indicator-position-x:
+    target: ".indicator-item"
+    class: "indicator-{}"
+    type: Enum[start,center,end]
+  indicator-position-y:
+    target: ".indicator-item"
+    class: "indicator-{}"
+    type: Enum[top,middle,bottom]
+---
+<div class="avatar">
+  <span class="indicator-item badge"></span>
+  <div>
+    <img />
+  </div>
+</div>

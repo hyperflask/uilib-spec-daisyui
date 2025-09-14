@@ -1,17 +1,31 @@
 ---
+doc:
+  description: |
+    Text Input is a simple input field.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/input/)
+
 props:
-  __unknown: true
-  bordered:
-    class: "input-bordered"
-    default: true
-  ghost:
-    class: "input-ghost"
-  style:
+  color:
     class: "input-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   size:
     class: "input-{}"
+    type: Enum[xs,sm,md,lg,xl]
+  ghost:
+    class: "input-ghost"
   type:
     attribute: type
     default: "text"
+  join:
+    class: join-item
+  validator:
+    class: validator
+  validator-hint:
+    target: ".validator-hint"
+    missing:
+      target: ".validator-hint"
+      outerHTML: ""
 ---
-<input class="input w-full" />
+<input class="input" />
+<div class="validator-hint"></div>

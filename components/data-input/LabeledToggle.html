@@ -1,0 +1,14 @@
+---
+doc: A Toggle wrapped in a label
+props:
+  color:
+    class: "toggle-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+  size:
+    class: "toggle-{}"
+    type: Enum[xs,sm,md,lg,xl]
+---
+<label class="label">
+  <input type="checkbox" class="toggle" />
+  <slot></slot>
+</label>

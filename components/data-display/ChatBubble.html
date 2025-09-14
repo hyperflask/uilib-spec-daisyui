@@ -1,0 +1,48 @@
+---
+doc: |
+  Chat bubbles are used to show one line of conversation and all its data, including the author image, author name, time, etc.
+
+  [Link to DaisyUI documentation](https://daisyui.com/components/chat/)
+
+props:
+  reply:
+    target: ".chat"
+    class: "chat-end"
+    missing:
+      class: "chat-start"
+  avatar:
+    target: ".chat-image img"
+    attribute: src
+    missing:
+      target: ".chat-image"
+      outerHTML: ""
+  avatar-alt:
+    target: ".chat-image img"
+    attribute: alt
+  header:
+    target: ".chat-header"
+    innerHTML: "{}"
+    missing:
+      outerHTML: ""
+  footer:
+    target: ".chat-footer"
+    innerHTML: "{}"
+    missing:
+      outerHTML: ""
+  color:
+    target: ".chat-bubble"
+    class: "chat-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
+---
+<div class="chat">
+  <div class="chat-image avatar">
+    <div class="w-10 rounded-full">
+      <img>
+    </div>
+  </div>
+  <div class="chat-header"></div>
+  <div class="chat-bubble">
+    <slot></slot>
+  </div>
+  <div class="chat-footer opacity-50"></div>
+</div>

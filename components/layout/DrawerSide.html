@@ -1,0 +1,14 @@
+---
+doc:
+  hidden: true
+
+props:
+  id:
+    target: label
+    attribute: for
+    default: drawer1
+---
+<div class="drawer-side">
+  <label aria-label="close sidebar" class="drawer-overlay"></label>
+  <slot></slot>
+</div>

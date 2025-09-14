@@ -1,9 +1,16 @@
 ---
+doc:
+  description: |
+    Range slider is used to select a value by sliding a handle.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/range/)
+
 props:
-  __unknown: true
-  style:
+  color:
     class: "range-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   size:
     class: "range-{}"
+    type: Enum[xs,sm,md,lg,xl]
 ---
 <input type="range" class="range" />

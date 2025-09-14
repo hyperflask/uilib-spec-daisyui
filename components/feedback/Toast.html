@@ -1,9 +1,17 @@
 ---
+doc:
+  description: |
+    Toast is a wrapper to stack elements, positioned on the corner of page.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/toast/)
+
 props:
   x:
     class: "toast-{}"
+    type: Enum[start,center,end]
   y:
     class: "toast-{}"
+    type: Enum[top,middle,bottom]
 ---
 <div class="toast">
   <slot></slot>

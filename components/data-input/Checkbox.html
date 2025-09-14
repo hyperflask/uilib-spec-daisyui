@@ -1,9 +1,24 @@
 ---
+doc:
+  description: |
+    Checkboxes are used to select or deselect a value.
+
+    [Link to DaisyUI documentation](https://daisyui.com/components/checkbox/)
+
 props:
-  __unknown: true
-  style:
+  color:
     class: "checkbox-{}"
+    type: Enum[primary,secondary,accent,neutral,success,warning,info,error]
   size:
     class: "checkbox-{}"
+    type: Enum[xs,sm,md,lg,xl]
+  validator:
+    class: validator
+  validator-hint:
+    target: ".validator-hint"
+    missing:
+      target: ".validator-hint"
+      outerHTML: ""
 ---
 <input type="checkbox" class="checkbox" />
+<div class="validator-hint"></div>
