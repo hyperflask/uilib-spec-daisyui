@@ -10,7 +10,7 @@ doc:
   examples:
     - title: Navbar menu for desktop + sidebar drawer for mobile
       props:
-        id: drawer1
+        drawer-id: drawer1
       children:
         - tag: DrawerContent
           children:
@@ -20,12 +20,12 @@ doc:
                 sidebar-toggle-responsive: lg
         - tag: DrawerSide
           props:
-            id: drawer1
+            drawer-id: drawer1
           children:
             - tag: Menu
 
 props:
-  id:
+  drawer-id:
     target: input
     attribute: id
     default: drawer1

@@ -12,10 +12,16 @@ props:
     transformations:
       - class: "avatar-placeholder"
       - target: "& > div"
-        class: "bg-neutral text-neutral-content"
+        class: "bg-{placeholder-bg-color} text-{placeholder-text-color}"
       - target: "& > div"
         innerHTML: '<span class="text-{placeholder-text-size}">{}</span>'
   placeholder-text-size:
+    transformations: []
+    type: String
+  placeholder-bg-color:
+    transformations: []
+    type: String
+  placeholder-text-color:
     transformations: []
     type: String
   alt:
@@ -23,7 +29,7 @@ props:
     attribute: alt
   rounded:
     target: "& > div"
-    class: ".rounded"
+    class: "rounded-full"
     default: true
   size:
     target: "& > div"
@@ -57,6 +63,8 @@ props:
     target: ".indicator-item"
     class: "indicator-{}"
     type: Enum[top,middle,bottom]
+  __unknown:
+    target: "& > div"
 ---
 <div class="avatar">
   <span class="indicator-item badge"></span>
